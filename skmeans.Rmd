@@ -1,0 +1,29 @@
+---
+title: "kmeans"
+author: "r"
+date: "11/23/2021"
+output: pdf_document
+---
+
+```{r}
+library(factoextra)
+```
+
+```{r}
+df <- mtcars
+```
+
+```{r}
+df <- na.omit(df)
+```
+
+```{r}
+km <- kmeans(df,centers=4,nstart=25)
+```
+
+```{r}
+fviz_cluster(km,data=df)
+```
+
+
+
